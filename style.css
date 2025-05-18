@@ -1,22 +1,23 @@
+body {
+    background-color: beige;
+}
+
+img {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.newClass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 h1 {
-    color: red;
-    font-size: xx-large;
-    background-color: aqua;
-}
-
-h2 {
-    color: blue;
-    font-size: x-large;
-
-}
-h3 {
-    color:burlywood;
-    font-size: medium;
-    background-color: black;
-}
-
-h4 {
-    color:cornflowerblue;
-    font-size: xx-large;
-    background-color: blanchedalmond;
+    color: black;
+    size: 70cap;
+    background-color: slategrey;
+    size: 50cm;
 }
