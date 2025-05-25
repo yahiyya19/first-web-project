@@ -1,5 +1,5 @@
 body {
-    background-color: beige;
+    background-color:#212121;
 }
 
 img {
@@ -20,4 +20,82 @@ h1 {
     size: 70cap;
     background-color: slategrey;
     size: 50cm;
+}
+
+
+ul {
+    display: flex;
+
+}
+
+.navLi {
+    margin-right: 10vw;
+}
+
+#home {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* About section */
+
+#about {
+    width: 100vw;
+    height: 100vh;
+    color:bisque
+}
+
+.bracket {
+    font-size: 4vw;
+    text-align: center;
+    color:bisque
+}
+
+.aboutme {
+    font-size: 5vw;
+    text-align: center;
+}
+.about { 
+    font-size: 2vw;
+    color: rgb(19, 97, 170);
+    text-align: center;
+}
+
+.parent-about {
+    display: flex;
+    flex-direction: row;
+}
+
+.child-about {
+    width: 50vw;
+    
+}
+
+.left-about {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+.right-about {
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+}
+
+
+
+
+
+
+/* Projects section */
+
+#projects {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.project {
+    font-size: 6vw;
+    text-align: center;
 }
