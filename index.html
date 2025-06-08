@@ -2,28 +2,19 @@
 <html>
 
 <head>
-    <title>My Portfolio</title>
+    <title>My Portfolioooo</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+   
     <nav>
-        <ul>
-            <li class="navLi">
-                <a href="#yahiyya">_yahiyya</a>
-            </li>
-            <li class="navLi">
-                <a href="#home">_home</a>
-            </li>
-            <li class="navLi">
-                <a href="#about">_about</a>
-            </li>
-            <li class="navLi">
-                <a href="#projects">_projects</a>
-            </li>
-            <li class="navLi">
-                <a href="#contact">_contact</a>
-            </li>
+        <ul class="navbar">
+            <li class="navLi"><a href="#yahiyya">_yahiyya</a></li>
+            <li class="navLi"><a href="#home">_home</a></li>
+            <li class="navLi"><a href="#about">_about</a></li>
+            <li class="navLi"><a href="#projects">_projects</a></li>
+            <li class="navLi"><a href="#contact">_contact</a></li>
         </ul>
     </nav>
     <section id="home">
@@ -69,8 +60,40 @@
             praesentium. Sapiente corporis possimus tempora?</h2>
     </section>
     <section id="contact">
-        <h3 class="contact"> contact me</h3>
+        <h3 class="contacts"> contact me</h3>
+        <br><br>
+
+        <form id="contactForm">
+            <label class="contactme" for="email">Enter your email.</label><br>
+            <input type="text" id="email" name="email" placeholder="Type here..."><br><br><br>
+
+            <label class="contactme" for="username">Enter your name.</label><br>
+            <input type="text" id="username" name="username" placeholder="Type here..."><br><br><br>
+
+            <label class="contactme" for="message">Message:</label><br>
+            <textarea class="big-textbox" id="message" name="message"
+                placeholder="Enter your text here..."></textarea><br><br>
+
+            <button type="submit" class="green-button">Submit</button>
+        </form>
     </section>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent actual form submission
+
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('username').value;
+            const message = document.getElementById('message').value;
+
+            // Save to local storage
+            localStorage.setItem('contactEmail', email);
+            localStorage.setItem('contactName', name);
+            localStorage.setItem('contactMessage', message);
+
+            alert("Form data saved to local storage!");
+        });
+    </script>
 
 </body>
 
