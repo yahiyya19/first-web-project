@@ -1,100 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My Portfolioooo</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahiyya's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   
+
     <nav>
         <ul class="navbar">
-            <li class="navLi"><a href="#yahiyya">_yahiyya</a></li>
-            <li class="navLi"><a href="#home">_home</a></li>
-            <li class="navLi"><a href="#about">_about</a></li>
-            <li class="navLi"><a href="#projects">_projects</a></li>
-            <li class="navLi"><a href="#contact">_contact</a></li>
+            <li><a href="#home">_home</a></li>
+            <li><a href="#about">_about</a></li>
+            <li><a href="#projects">_projects</a></li>
+            <li><a href="#contact">_contact</a></li>
         </ul>
     </nav>
-    <section id="home">
-        <div class="newClass">
-            <img src="12291.jpg">
-            <h1>Yahiyya</h1>
-            <p>Learning Web Development</p>
+
+    <header id="home">
+        <div class="hero">
+            <img src="12291.jpg" alt="Profile image">
+            <h1>Hi, I'm Yahiyya</h1>
+            <p>Web Developer in Training</p>
         </div>
-    </section>
+    </header>
 
     <section id="about">
-        <p class="bracket">{/}</p>
-        <p class="aboutme">{about me}</p>
-        <p class="about">...lorem ipsum dolor sit amet, consectetur adipiscing <br />elit. Ut elit tellus, luctus nec
-            ullamcorper mattis.
-        </p>
-        <div class="parent-about">
-            <div class="left-about child-about">
-                <p>
-                    ...I have over 12 years of experience in web development, with a strong background in both front-end
-                    and back-end technologies;
-                </p>
+        <h2>{ about me }</h2>
+        <p class="about-summary">I have over 12 years of experience in web development, with a strong background in both front-end and back-end technologies.</p>
+        <div class="about-boxes">
+            <div class="box">
+                <p>I enjoy building responsive and interactive websites that solve real-world problems.</p>
             </div>
-            <div class="right-about child-about">
-                <p>
-                    …curabitur sit amet luctus tortor, sit amet ultrices ante. Maecenas convallis dui arcu, et tempor
-                    felis consectetur vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-                    cubilia curae; Sed id velit ex. Cras ultricies nisi eget sem mollis, a maximus felis laoreet. Nam
-                    eget ultricies urna, vel ullamcorper arcu. Quisque feugiat rhoncus arcu, a tincidunt arcu lacinia
-                    ac. Maecenas molestie vel ante in finibus. Sed sit amet ligula eros. In hac habitasse platea
-                    dictumst;
-                </p>
+            <div class="box">
+                <p>I love to explore new technologies and continuously improve my skills and design aesthetics.</p>
             </div>
         </div>
     </section>
 
     <section id="projects">
-        <h1 class="project"> project </h1>
-        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam maiores, odit facere in debitis eos
-            accusantium! Dolore et, itaque consequuntur officia enim, aliquid quam quidem tenetur saepe mollitia,
-            laboriosam non facere commodi cumque doloribus. Quisquam sint sapiente aspernatur optio illum, error cum
-            nulla impedit alias velit expedita fugiat perferendis omnis. Accusamus numquam minima sint perspiciatis
-            praesentium. Sapiente corporis possimus tempora?</h2>
-    </section>
+        <h2>{ projects }</h2>
+        <p class="project-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, praesentium. Nulla impedit alias velit expedita fugiat perferendis omnis.
+            <img src="work-03.jpg"></section>
+
     <section id="contact">
-        <h3 class="contacts"> contact me</h3>
-        <br><br>
-
+        <h2>{ contact me }</h2>
         <form id="contactForm">
-            <label class="contactme" for="email">Enter your email.</label><br>
-            <input type="text" id="email" name="email" placeholder="Type here..."><br><br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
-            <label class="contactme" for="username">Enter your name.</label><br>
-            <input type="text" id="username" name="username" placeholder="Type here..."><br><br><br>
+            <label for="username">Name</label>
+            <input type="text" id="username" name="username" placeholder="Your name" required>
 
-            <label class="contactme" for="message">Message:</label><br>
-            <textarea class="big-textbox" id="message" name="message"
-                placeholder="Enter your text here..."></textarea><br><br>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message here..." required></textarea>
 
-            <button type="submit" class="green-button">Submit</button>
+            <button type="submit">Send Message</button>
         </form>
     </section>
 
+    <footer>
+        <p>© 2025 Yahiyya. All rights reserved.</p>
+    </footer>
+
     <script>
         document.getElementById('contactForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent actual form submission
-
+            e.preventDefault();
             const email = document.getElementById('email').value;
             const name = document.getElementById('username').value;
             const message = document.getElementById('message').value;
 
-            // Save to local storage
             localStorage.setItem('contactEmail', email);
             localStorage.setItem('contactName', name);
             localStorage.setItem('contactMessage', message);
 
-            alert("Form data saved to local storage!");
+            alert("Thanks for reaching out! Your message has been saved.");
         });
     </script>
-
 </body>
 
 </html>
