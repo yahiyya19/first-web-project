@@ -42,6 +42,53 @@ nav {
     color: #00bcd4;
 }
 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        width: 100%;
+        padding: 1rem 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+
 header {
     display: flex;
     flex-direction: column;
