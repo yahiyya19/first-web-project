@@ -2,32 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yahiyya's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-   <nav>
-    <div class="nav-container">
-        <button class="hamburger" id="hamburger">&#9776;</button>
-        <ul class="navbar" id="navbar">
-            <li><a href="#home">_home</a></li>
-            <li><a href="#about">_about</a></li>
-            <li><a href="#projects">_projects</a></li>
-            <li><a href="#contact">_contact</a></li>
-        </ul>
-    </div>
-</nav>
-
-
-    
+    <nav role="navigation">
+        <div class="nav-container">
+            <ul class="navbar" id="navbar">
+                <li><a href="#home">_home</a></li>
+                <li><a href="#about">_about</a></li>
+                <li><a href="#projects">_projects</a></li>
+                <li><a href="#contact">_contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">&#9776;</button>
+        </div>
+    </nav>
 
     <header id="home">
         <div class="hero">
-            <img src="12291.jpg" alt="Profile image">
+            <img src="12291.jpg" alt="Yahiyya's profile image" />
             <h1>Hi, I'm Yahiyya</h1>
             <p>Web Developer in Training</p>
         </div>
@@ -49,8 +46,10 @@
     <section id="projects">
         <h2>{ projects }</h2>
         <p class="project-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, praesentium. Nulla impedit alias velit expedita fugiat perferendis omnis.
-            <img src="work-03.jpg"></section>
+            A showcase of my recent work and collaborations.
+        </p>
+        <img src="work-03.jpg" alt="Project screenshot">
+    </section>
 
     <section id="contact">
         <h2>{ contact me }</h2>
@@ -85,13 +84,11 @@
 
             alert("Thanks for reaching out! Your message has been saved.");
         });
-    </script>
 
-    <script>
-    document.getElementById('hamburger').addEventListener('click', function () {
-        document.getElementById('navbar').classList.toggle('show');
-    });
-</script>
+        document.getElementById('hamburger').addEventListener('click', function () {
+            document.getElementById('navbar').classList.toggle('show');
+        });
+    </script>
 
 </body>
 
